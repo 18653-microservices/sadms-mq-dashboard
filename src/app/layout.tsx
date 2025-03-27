@@ -1,3 +1,4 @@
+import { Provider } from "@/components/ui/provider"
 import type { Metadata } from "next"
 import { ThemeProvider } from "next-themes"
 import { Inter } from "next/font/google"
@@ -48,12 +49,14 @@ export default function RootLayout({
         className={`${inter.className} overflow-y-scroll scroll-auto antialiased selection:bg-indigo-100 selection:text-indigo-700 dark:bg-gray-950`}
         suppressHydrationWarning
       >
-        <div className="mx-auto max-w-screen-2xl">
-          <ThemeProvider defaultTheme="system" attribute="class">
-            <Sidebar />
-            <main className="lg:pl-72">{children}</main>
-          </ThemeProvider>
-        </div>
+        <Provider>
+          <div className="mx-auto max-w-screen-2xl">
+            <ThemeProvider defaultTheme="system" attribute="class">
+              <Sidebar />
+              <main className="lg:pl-72">{children}</main>
+            </ThemeProvider>
+          </div>
+        </Provider>
       </body>
     </html>
   )
