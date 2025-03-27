@@ -94,9 +94,10 @@ export default function Overview() {
           RabbitMQ Monitoring
         </h1>
         <dl className={cx("mt-10 grid grid-cols-1 gap-14 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2",)}>
+          
           <SystemOverview stats={statsData} />
 
-          <div className="mt-8">
+          <div className="mt-4">
             <h2 id="system-overview" className="text-xl font-bold text-gray-900 dark:text-gray-50">
               Queue Status
             </h2>
@@ -120,7 +121,7 @@ export default function Overview() {
             queues={myQueues}
           />
 
-          <div className="mt-8">
+          <div className="mt-4 mb-10">
             <h2 id="system-overview" className="text-xl font-bold text-gray-900 dark:text-gray-50">
               Message Rates
             </h2>

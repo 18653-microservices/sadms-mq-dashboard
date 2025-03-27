@@ -13,7 +13,7 @@ export function QueueList({
   queues,
 }: QueueListProps) {
   return (
-    <section aria-labelledby="queue-list" className="mt-8 max-w-sm">
+    <section aria-labelledby="queue-list" className="mt-4 max-w-sm">
       <h2
         id="queue-list"
         className="text-xl font-bold text-gray-900 dark:text-gray-50"

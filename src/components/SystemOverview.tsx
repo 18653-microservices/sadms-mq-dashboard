@@ -12,7 +12,7 @@ interface SystemOverviewProps {
 
 export function SystemOverview({ stats }: SystemOverviewProps) {
   return (
-    <section aria-labelledby="system-overview" className="mt-8">
+    <section aria-labelledby="system-overview" className="mt-4">
       <h2
         id="system-overview"
         className="text-xl font-bold text-gray-900 dark:text-gray-50"
