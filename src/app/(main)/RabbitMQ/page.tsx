@@ -2,11 +2,8 @@
 import { AreaChart } from "@/components/AreaChart"
 import { SystemOverview } from "@/components/SystemOverview"
 import { QueueList } from "@/components/QueueList"
-import { overviews } from "@/data/overview-data"
 import { cx } from "@/lib/utils"
-import { subDays, toDate } from "date-fns"
 import React from "react"
-import { DateRange } from "react-day-picker"
 
 export type PeriodValue = "previous-period" | "last-year" | "no-comparison"
 
@@ -74,18 +71,7 @@ const chartdata2 = [
 ]
 
 
-const overviewsDates = overviews.map((item) => toDate(item.date).getTime())
-const maxDate = toDate(Math.max(...overviewsDates))
-
 export default function Overview() {
-  const [selectedDates, setSelectedDates] = React.useState<
-    DateRange | undefined
-  >({
-    from: subDays(maxDate, 30),
-    to: maxDate,
-  })
-  const [selectedPeriod, setSelectedPeriod] =
-    React.useState<PeriodValue>("last-year")
 
   return (
     <>
