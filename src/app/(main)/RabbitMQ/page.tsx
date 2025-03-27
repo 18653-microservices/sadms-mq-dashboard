@@ -2,7 +2,6 @@
 import { AreaChart } from "@/components/AreaChart"
 import { SystemOverview } from "@/components/SystemOverview"
 import { QueueList } from "@/components/QueueList"
-import { ChartCard } from "@/components/ui/overview/DashboardChartCard"
 import { overviews } from "@/data/overview-data"
 import { cx } from "@/lib/utils"
 import { subDays, toDate } from "date-fns"
@@ -91,24 +90,14 @@ export default function Overview() {
   return (
     <>
       <section aria-labelledby="usage-overview">
-        <h1
-          id="usage-overview"
-          className="mt-16 scroll-mt-8 text-lg font-semibold text-gray-900 sm:text-xl dark:text-gray-50"
-        >
+        <h1 id="usage-overview" className="mt-16 scroll-mt-8 text-lg font-semibold text-gray-900 sm:text-xl dark:text-gray-50">
           RabbitMQ Monitoring
         </h1>
-        <dl
-          className={cx(
-            "mt-10 grid grid-cols-1 gap-14 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2",
-          )}
-        >
+        <dl className={cx("mt-10 grid grid-cols-1 gap-14 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2",)}>
           <SystemOverview stats={statsData} />
 
           <div className="mt-8">
-            <h2
-              id="system-overview"
-              className="text-xl font-bold text-gray-900 dark:text-gray-50"
-            >
+            <h2 id="system-overview" className="text-xl font-bold text-gray-900 dark:text-gray-50">
               Queue Status
             </h2>
             <AreaChart
@@ -132,10 +121,7 @@ export default function Overview() {
           />
 
           <div className="mt-8">
-            <h2
-              id="system-overview"
-              className="text-xl font-bold text-gray-900 dark:text-gray-50"
-            >
+            <h2 id="system-overview" className="text-xl font-bold text-gray-900 dark:text-gray-50">
               Message Rates
             </h2>
             <AreaChart
@@ -148,7 +134,6 @@ export default function Overview() {
           </div>
 
         </dl>
-
       </section>
     </>
   )
